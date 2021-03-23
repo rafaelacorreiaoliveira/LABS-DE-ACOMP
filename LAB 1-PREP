@@ -5,7 +5,7 @@ u: .word 1,1  #primeiro e segundo numero da sucessão
 
 .text
 li x14,2     #offset da contagem (pois ja temos os 2 primeiros membros)
-li x15,10    #numero de membros que se deseja da sucessão
+li x15,10    #numero máximo de membros
 la x10,u     #Load da adress do primeiro membro da sucessão (x10 vai ter o valor do endereço de u1)
 
 loop:bge x14,x15, end
@@ -14,7 +14,7 @@ lw x12,4(x10)       #O segundo valor de x10, é carregado no registo x12
 add x13,x12,x11     #Soma x12 com x11 e guarda em x13, ou seja, soma o primeiro valor de x10 com o segundo 
 sw x13,8(x10)       #x13 corresponde ao terceiro valor da sucessão pois é a soma dos anteriores, e é guardado como terceiro valor de x10
 addi x14,x14,1      #contagem do numero de ciclos (começa em 2 e acaba em  10)
-addi x10,x10,0x4      #salta para a posição de memoria seguinte (como se aumentasse o offset do x13)
+addi x10,x10,0x4    #salta para a posição de memoria seguinte 
 j loop
 end:
 
