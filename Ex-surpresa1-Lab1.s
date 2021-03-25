@@ -1,4 +1,4 @@
-#Pretende-se criar uma tabela na memória do procesador com os
+#Pretende-se criar uma tabela na memÃ³ria do procesador com os
 #valores 3^(i+1) + 5*i
 #Quando o i varia de 0 a 10
 
@@ -8,9 +8,9 @@ i: .word 1
 .text
 la x10,i
 lw x11, 0(x10) 
-li x12, 9 #número de ciclos 
-li x13, 3 #load do número 3
-li x14, 5 #load do número 5
+li x12, 9 #nÃºmero de ciclos 
+li x13, 3 #load do nÃºmero 3
+li x14, 5 #load do nÃºmero 5
 li x15, 3
 li x20, 3
 li x21, 0
