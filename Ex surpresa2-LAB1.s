@@ -1,5 +1,5 @@
-#Pretende-se criar uma tabela na memória do processador com os valores de 
-#i!+3^i, quando o i varia de 0 até 10
+#Pretende-se criar uma tabela na memÃ³ria do processador com os valores de 
+#i!+3^i, quando o i varia de 0 atÃ© 10
 
 .data 
 x: .word 1 #i!
