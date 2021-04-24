@@ -6,12 +6,12 @@
 	y: .word 3
 
 # ZONA II: Codigo
-.text
+.text   PC=0
 
 # Programa principal: programa que recebe dois numeros inteiros positivos, x e y, e retorna o valor de x^y
-	lw a0, x
-	lw a1, y
-	jal Pow
+	lw a0, x  PC=8 (DUAS OPERAÇÕES)
+	lw a1, y (queremos saber o valor do PC aqui) PC=16 (DUAS OPERAÇÕES)
+	jal Pow      PC=20  (jal=PC+4)                       
 
 	li a7, 1
 	ecall
